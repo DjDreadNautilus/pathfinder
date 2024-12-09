@@ -4,6 +4,8 @@
 #include "../libmx/inc/libmx.h"
 #include <limits.h>
 
+//graph related structures
+
 typedef struct s_vertex
 {
     char *name;
@@ -24,7 +26,7 @@ typedef struct s_paths {
     int num_paths;      
 } t_paths;
 
-//forgor
+//utility
 
 int mx_atoi(const char *str);
 bool mx_isdigit(char c);
@@ -45,8 +47,12 @@ void mx_free_paths(t_paths *all_paths);
 //validate
 
 bool mx_validate_file(char **strarr, const char *filename, char *file_content);
+bool mx_validate_dublicates(char **strarr);
+int mx_count_real_amount(char **strarr);
+bool is_vertex_in_list(t_list *list, char *vertex);
+bool mx_validate_line(const char *line);
 
-//process
+//algorithm
 
 t_paths mx_find_all_paths(t_graph *graph, int src, int dst);
 int mx_find_distance(t_graph *graph, int *path, int path_length);

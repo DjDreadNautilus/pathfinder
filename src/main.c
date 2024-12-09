@@ -2,10 +2,8 @@
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
-        mx_printerr("usage: ");
-        mx_printerr(argv[0]);
-        mx_printerr(" <filename>\n");
-
+        mx_printerr("usage: ./pathfinder [filename]\n");
+        
         return -1;
     }
 
@@ -38,3 +36,5 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
+
